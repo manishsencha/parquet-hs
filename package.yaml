@@ -2,13 +2,14 @@ name: parquet-haskell
 version: 0.1.0.0
 synopsis: Streaming Parquet reader
 description: Please see the README on GitHub at <https://github.com/manishsencha/parquet-haskell#readme>
+github: manishsencha/parquet-haskell
 author: Manish Sencha
 copyright: 2019-2021 Yigit Ozkavci, 2026 Manish Sencha
 maintainer: Manish Sencha <manishsencha2001@gmail.com>
 category: Compression
 license: BSD3
 
-ghc-options: -Wall -O2 -fspecialise-aggressively
+ghc-options: -Wall -fspecialise-aggressively
 
 default-extensions:
   - DataKinds
@@ -37,29 +38,29 @@ library:
   source-dirs: src
   ghc-options: -Wall
   dependencies:
-  - pinch
-  - text
-  - bytestring
-  - binary
-  - mtl
-  - containers
-  - conduit
-  - binary-conduit
-  - monad-logger
-  - conduit-extra
-  - generic-lens
-  - lens
-  - safe
-  - aeson
-  - unordered-containers
-  - lifted-async
-  - serialise
-  - http-conduit
-  - http-client
-  - http-types
-  - vector
-  - pretty-simple
-  - relude
+  - pinch >= 0.5.2 && < 0.6
+  - text >= 2.0.2 && < 2.1
+  - bytestring >= 0.11.5 && < 0.12
+  - binary >= 0.8.9 && < 0.9
+  - mtl >= 2.3.1 && < 2.4
+  - containers >= 0.6.7 && < 0.7
+  - conduit >= 1.3.6 && < 1.4
+  - binary-conduit >= 1.3.1 && < 1.4
+  - monad-logger >= 0.3.42 && < 0.4
+  - conduit-extra >= 1.3.8 && < 1.4
+  - generic-lens >= 2.3.0 && < 2.4
+  - lens >= 5.3.6 && < 5.4
+  - safe >= 0.3.21 && < 0.4
+  - aeson >= 2.2.3 && < 2.3
+  - unordered-containers >= 0.2.21 && < 0.3
+  - lifted-async >= 0.11.0 && < 0.12
+  - serialise >= 0.2.6 && < 0.3
+  - http-conduit >= 2.3.9 && < 2.4
+  - http-client >= 0.7.19 && < 0.8
+  - http-types >= 0.12.4 && < 0.13
+  - vector >= 0.13.2 && < 0.14
+  - pretty-simple >= 4.1.4 && < 4.2
+  - relude >= 1.2.2 && < 1.3
 
 tests:
   parquet-haskell-unit:
@@ -71,10 +72,10 @@ tests:
       - -with-rtsopts=-N
     dependencies:
     - parquet-haskell
-    - hspec
-    - QuickCheck
-    - bytestring
-    - binary
+    - hspec >= 2.10 && < 3.0
+    - QuickCheck >= 2.14 && < 3.0
+    - bytestring >= 0.11.5 && < 0.12
+    - binary >= 0.8.9 && < 0.9
   parquet-haskell-integration:
     main: Spec.hs
     source-dirs: tests/integration
@@ -84,15 +85,15 @@ tests:
       - -with-rtsopts=-N
     dependencies:
     - parquet-haskell
-    - hspec
-    - QuickCheck
-    - bytestring
-    - mtl
-    - binary
-    - filepath
-    - process
-    - aeson
-    - text
-    - conduit
-    - monad-logger
-    - pretty-simple
+    - hspec >= 2.10 && < 3.0
+    - QuickCheck >= 2.14 && < 3.0
+    - bytestring >= 0.11.5 && < 0.12
+    - mtl >= 2.3.1 && < 2.4
+    - binary >= 0.8.9 && < 0.9
+    - filepath >= 1.4 && < 1.5
+    - process >= 1.6 && < 1.7
+    - aeson >= 2.2.3 && < 2.3
+    - text >= 2.0.2 && < 2.1
+    - conduit >= 1.3.6 && < 1.4
+    - monad-logger >= 0.3.42 && < 0.4
+    - pretty-simple >= 4.1.4 && < 4.2
