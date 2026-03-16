@@ -29,14 +29,9 @@ jobs:
       - name: Create source distribution
         run: cabal sdist
 
-      - name: Copy package to packagesPath
-        run: |
-          mkdir -p ${{ runner.temp }}/packages
-          cp dist-newstyle/sdist/*.tar.gz ${{ runner.temp }}/packages/
-
       - name: Publish to Hackage
         uses: haskell-actions/hackage-publish@v1
         with:
           hackageToken: ${{ secrets.HACKAGE_AUTH_TOKEN }}
-          packagesPath: ${{ runner.temp }}/packages
+          packagesPath: dist-newstyle/sdist
           publish: false
