@@ -1,7 +1,7 @@
-name: parquet-hs-next
+name: parquet-haskell
 version: 0.1.0.0
 synopsis: Streaming Parquet reader
-description: Please see the README on GitHub at <https://github.com/manishsencha/parquet-hs#readme>
+description: Please see the README on GitHub at <https://github.com/manishsencha/parquet-haskell#readme>
 author: Manish Sencha
 copyright: 2019-2021 Yigit Ozkavci, 2026 Manish Sencha
 maintainer: Manish Sencha <manishsencha2001@gmail.com>
@@ -62,7 +62,7 @@ library:
   - relude
 
 tests:
-  parquet-hs-unit:
+  parquet-haskell-unit:
     main: Spec.hs
     source-dirs: tests/unit
     ghc-options:
@@ -70,12 +70,12 @@ tests:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-    - parquet-hs-next
+    - parquet-haskell
     - hspec
     - QuickCheck
     - bytestring
     - binary
-  parquet-hs-integration:
+  parquet-haskell-integration:
     main: Spec.hs
     source-dirs: tests/integration
     ghc-options:
@@ -83,7 +83,7 @@ tests:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-    - parquet-hs-next
+    - parquet-haskell
     - hspec
     - QuickCheck
     - bytestring

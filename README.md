@@ -1,12 +1,12 @@
-# parquet-hs-next
+# parquet-haskell
 
 A Streaming Parquet reader for Haskell.
 
-[![Haskell CI](https://github.com/manishsencha/parquet-hs/actions/workflows/ci.yml/badge.svg)](https://github.com/manishsencha/parquet-hs/actions/workflows/ci.yml)
+[![Haskell CI](https://github.com/manishsencha/parquet-haskell/actions/workflows/ci.yml/badge.svg)](https://github.com/manishsencha/parquet-haskell/actions/workflows/ci.yml)
 
 ## Description
 
-`parquet-hs-next` is a library for streaming data from Parquet files in Haskell. It provides a way to read and parse Parquet files efficiently.
+`parquet-haskell` is a library for streaming data from Parquet files in Haskell. It provides a way to read and parse Parquet files efficiently.
 
 ## Prerequisites
 

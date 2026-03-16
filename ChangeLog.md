@@ -1,3 +1,3 @@
-# Changelog for parquet-hs
+# Changelog for parquet-haskell
 
 ## Unreleased changes

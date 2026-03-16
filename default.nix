@@ -12,7 +12,7 @@ let
 
   myHaskellPackages = baseHaskellPkgs.override {
     overrides = self: super: {
-      parquet-hs-next = self.callCabal2nix "parquet-hs-next" (./.) { };
+      parquet-haskell = self.callCabal2nix "parquet-haskell" (./.) { };
       # I opened up an MR fixing `pinch` on nixpkgs by bumping the version of
       # network `pinch` uses but it's causing issues here so instead we're
       # just disabling the test suite here as that's where the error is.
@@ -22,7 +22,7 @@ let
   };
 
   shell = myHaskellPackages.shellFor {
-    packages = p: with p; [ parquet-hs-next ];
+    packages = p: with p; [ parquet-haskell ];
 
     buildInputs = with pkgs.haskellPackages; [
       cabal-install
@@ -45,5 +45,5 @@ let
 in {
   inherit shell;
   inherit myHaskellPackages;
-  parquet-hs-next = myHaskellPackages.parquet-hs-next;
+  parquet-haskell = myHaskellPackages.parquet-haskell;
 }
